@@ -1,0 +1,260 @@
+* {
+    background-color: black;
+}
+
+.Navlist{
+    color: white;
+    list-style: none;
+}
+
+.navbar {
+    display: flex;
+    text-align: center;
+}
+
+.planets {
+    width: 1500px;
+    height: 1500px;
+   
+    
+}
+
+.sun {
+    width:37.5px;
+    height:37.5px;
+    position: absolute;
+    top: 50% ;
+    left: 50%;
+    z-index: 11;
+
+}
+
+
+.mercury {
+    z-index: 10;
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    top: 50% ;
+    left: 50%;
+    transform: translate(-25%,-25%);
+    animation: Mercury 2.5s infinite linear; 
+   
+
+}
+
+.venus {
+    width: 109px;
+    height: 109px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 9;
+    transform: translate(-33%, -32%);
+    animation: Venus 2.8s infinite linear;
+
+}
+
+.earth {
+    width: 157px;
+    height: 157px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 8;
+    transform: translate(-39%, -38%);
+    animation: Earth 3.5s infinite linear;
+}
+
+.mars {
+    width: 217px;
+    height: 217px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 7;
+    transform: translate(-42%, -42%);
+    animation: Mars 4s infinite linear;
+}
+
+.jupiter {
+    width: 326.25px;
+    height: 327px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 6;
+    transform: translate(-40%, -45%);
+    animation: Jupiter 4.5s infinite linear;
+}
+.saturn {
+    width: 462px;
+    height: 462px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 5;
+    transform: translate(-43%, -46%);
+    animation: Saturn 5s infinite linear;
+}
+
+.uranus {
+    width: 700px;
+    height: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 4;
+    transform: translate(-43%, -46%);
+    animation: Uranus 5.5s infinite linear;
+}
+.neptune {
+    width: 1055px;
+    height: 1055px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    transform: translate(-42%, -46%);
+    animation: Neptune 6s infinite linear;
+}
+
+@keyframes Mercury {
+
+    0%{
+        transform: translate(-25%,-25%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-25%,-25%) rotate(360deg);
+    }
+    
+    
+}
+
+@keyframes Venus {
+
+    0%{
+        transform: translate(-33%, -32%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-33%, -32%) rotate(360deg);
+    }
+    
+    
+}
+@keyframes Earth {
+
+    0%{
+        transform: translate(-39%, -38%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-39%, -38%) rotate(360deg);
+    }
+    
+    
+}
+
+@keyframes Mars {
+
+    0%{
+        transform: translate(-42%, -42%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-42%, -42%) rotate(360deg);
+    }
+    
+    
+}
+
+@keyframes Jupiter {
+
+    0%{
+        transform: translate(-40%, -45%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-40%, -45%) rotate(360deg);
+    }
+    
+    
+}
+
+@keyframes Saturn {
+
+    0%{
+        transform: translate(-43%, -46%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-43%, -46%) rotate(360deg);
+    }
+    
+    
+}
+@keyframes Uranus {
+
+    0%{
+        transform: translate(-43%, -46%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-43%, -46%) rotate(360deg);
+    }
+    
+    
+}
+@keyframes Neptune {
+
+    0%{
+        transform: translate(-43%, -46%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-43%, -46%) rotate(360deg);
+    }
+    
+    
+}
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+  }
+  
+  .searchTerm {
+    width: 100%;
+    border: 3px solid #00B4CC;
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+  }
+  
+  .searchTerm:focus{
+    color: #00B4CC;
+  }
+  
+  .searchButton {
+    width: 40px;
+    height: 36px;
+    border: 1px solid #00B4CC;
+    background: #00B4CC;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  
+  .wrap{
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+
+
+
+
+
