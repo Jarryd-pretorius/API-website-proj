@@ -1,5 +1,8 @@
 * {
-    background-color: black;
+    background: black;
+}
+.planets {
+    background: black;
 }
 
 .Navlist{
@@ -39,6 +42,7 @@
     left: 50%;
     transform: translate(-25%,-25%);
     animation: Mercury 2.5s infinite linear; 
+    background: none;
    
 
 }
@@ -52,6 +56,7 @@
     z-index: 9;
     transform: translate(-33%, -32%);
     animation: Venus 2.8s infinite linear;
+    background: none;
 
 }
 
@@ -64,6 +69,7 @@
     z-index: 8;
     transform: translate(-39%, -38%);
     animation: Earth 3.5s infinite linear;
+    background: none;
 }
 
 .mars {
@@ -75,6 +81,7 @@
     z-index: 7;
     transform: translate(-42%, -42%);
     animation: Mars 4s infinite linear;
+    background: none;
 }
 
 .jupiter {
@@ -86,6 +93,7 @@
     z-index: 6;
     transform: translate(-40%, -45%);
     animation: Jupiter 4.5s infinite linear;
+    background: none;
 }
 .saturn {
     width: 462px;
@@ -96,6 +104,7 @@
     z-index: 5;
     transform: translate(-43%, -46%);
     animation: Saturn 5s infinite linear;
+    background: none;
 }
 
 .uranus {
@@ -107,6 +116,7 @@
     z-index: 4;
     transform: translate(-43%, -46%);
     animation: Uranus 5.5s infinite linear;
+    background: none;
 }
 .neptune {
     width: 1055px;
@@ -117,6 +127,7 @@
     z-index: 3;
     transform: translate(-42%, -46%);
     animation: Neptune 6s infinite linear;
+    background: none;
 }
 
 @keyframes Mercury {
@@ -214,6 +225,7 @@
 .heading-main {
     text-align: center;
     color: white;
+    background: black;
     font-family: sans-serif;
     font-size: 50px;
 
@@ -244,7 +256,47 @@ button {
 
 }
 
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: center;
+    border: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    outline: none;
+    font-size: 20px;
+    transition: 0.4s;
+  }
+  
+  .active, .accordion:hover {
+    background-color: #ccc;
+  }
+  
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+  }
 
+  .pan-title {
+      background: white;
+      color: grey;
+      text-align: right;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      padding-right: 20%;
+      padding-top: 10px;
+  }
+
+  .planet-pic {
+      background: none;
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      padding-top: 10px;
+  }
 
 
 

@@ -21,11 +21,72 @@
     </div>
     <div class="heading-main">
         <h1>Galactic Weather</h1>
-    </div>
-    <form id="form"> 
+    
+        <form id="form"> 
         <input type="search" id="query" name="q" placeholder="Search Planets...">
         <button>Search</button>
       </form>
+    </div>
+    <button class="accordion">Mercury</button>
+    <div class="panel">
+        <img class="planet-pic" src="./images/mercury single.png" alt="mercury">
+        <h2 class="pan-title">Mercury</h2>
+        <p>Lorem ipsum...</p>
+    </div>
+    
+    <button class="accordion">Venus</button>
+    <div class="panel">
+      <p>Lorem ipsum...</p>
+    </div>
+    
+    <button class="accordion">Earth</button>
+    <div class="panel">
+      <p>Lorem ipsum...</p>
+    </div>
+
+    <button class="accordion">Mars</button>
+    <div class="panel">
+      <p>Lorem ipsum...</p>
+    </div>
+
+    <button class="accordion">Jupiter</button>
+    <div class="panel">
+      <p>Lorem ipsum...</p>
+    </div>
+
+    <button class="accordion">Saturn</button>
+    <div class="panel">
+      <p>Lorem ipsum...</p>
+    </div>
+    <button class="accordion">Uranus</button>
+    <div class="panel">
+      <p>Lorem ipsum...</p>
+    </div>
+    <button class="accordion">neptune</button>
+    <div class="panel">
+      <p>Lorem ipsum...</p>
+    </div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+
+            
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+            panel.style.display = "none";
+            } else {
+            panel.style.display = "block";
+            }
+        });
+        }
+    </script>
+
+
      
 </body>
 </html>
