@@ -20,34 +20,44 @@
         <img src="./images/neptune.png" alt="neptune" class="neptune">
     </div>
     <div class="heading-main">
-        <h1>Galactic Weather</h1>
+        <h1>Galactic</h1>
+        <h1>google</h1>
     
         <form id="form"> 
-        <input type="search" id="query" name="q" placeholder="Search Planets...">
-        <button>Search</button>
+        <input type="search" id="query"  placeholder="Search Planets...">
+        <button type="button" class="search_btn" onclick="getPlanetWeather();">Search</button>
       </form>
     </div>
-    <button class="accordion">Mercury</button>
+    <button class="accordion" id="merc">Mercury</button>
     <div class="panel">
         <img class="planet-pic" src="./images/mercury single.png" alt="mercury">
-        <h2 class="pan-title">Mercury</h2>
-        <p>Lorem ipsum...</p>
-    </div>
-    
-    <button class="accordion">Venus</button>
-    <div class="panel">
-      <p>Lorem ipsum...</p>
-    </div>
-    
-    <button class="accordion">Earth</button>
-    <div class="panel">
-      <p>Lorem ipsum...</p>
-    </div>
-
-    <button class="accordion">Mars</button>
-    <div class="panel">
-      <p>Lorem ipsum...</p>
-    </div>
+        <h2 id="temp">17</h2>
+        <span class="symbol_C" onclick="changeTempToC()">&#8451;</span>
+        <div class="line"></div>
+        <span class = "symbol_F" onclick="changeTempToF()">&#8457;</span>
+        <h2 class="pan-title" id="title">Mercury</h2>
+        <div class="info-section">
+            <div id="left" class="info">
+                <ul class="info_list">
+                    <li>Closest Distance from sun: <span id="clos_sun"></span></li>
+                    <li>Furthest Distance from sun: <span id="far_sun"></span></li>
+                    <li>mass: <span id="mass"></span></li>
+                    <li>gravity: <span id="grav"></span></li>
+                    <li>Avg Radius: <span id="radi"></span></li>
+                    <li>Escape velocity: <span id="esc_vel"></span></li>
+                </ul>
+            </div>
+            <div id="right" class ="info">
+                <ul class="info_list">
+                    <li>Number of moons: <span id="moons"></span></li>
+                    <li>name (French): <span id="french"></span></li>
+                    <li>Discovered By: <span id="dis_by"></span></li>
+                    <li>Discovery date: <span id="date"></span></li>
+                    <li>Average length of day: <span id="day"></span></li>
+                    <li>Average orbit length: <span id="orbit"></span></li>
+                </ul>
+            </div>
+        </div>
 
     <button class="accordion">Jupiter</button>
     <div class="panel">
@@ -85,6 +95,7 @@
         });
         }
     </script>
+    <script src="./index.js"></script>
 
 
      
