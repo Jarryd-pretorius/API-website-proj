@@ -5,7 +5,6 @@ let Planet_API = 'https://api.le-systeme-solaire.net/rest/bodies/'
  
 function newUrl() {
    let data = document.getElementById('query').value;
-   console.log(data);
    return Planet_API + data; 
 }
 
@@ -39,9 +38,6 @@ async function getPlanetWeather() {
     planet_data.meanRadius;
     document.getElementById('esc_vel').innerHTML = 
     planet_data.escape;
-    const numMoons = planet_data.moons.length;
-    document.getElementById('moons').innerHTML = 
-    numMoons;
     document.getElementById('french').innerHTML = 
     planet_data.name;
     document.getElementById('dis_by').innerHTML = 
@@ -52,6 +48,34 @@ async function getPlanetWeather() {
     planet_data.sideralRotation;
     document.getElementById('orbit').innerHTML = 
     orbitYears;
+    if (planet_data.moons == null) {
+        console.log('null')
+        
+        document.getElementById('moons').innerHTML = 0
+    } else 
+    {
+        const numMoons = planet_data.moons.length;
+        document.getElementById('moons').innerHTML = 
+        numMoons;
+        const Moons = planet_data.moons
+   
+
+        for (const n of Moons) {
+        const moonObj = n
+        //    console.log(moonObj);
+        const EMoon = moonObj.moon
+        //    console.log(EMoon);
+        const para = document.createElement("p");
+        const node = document.createTextNode("Moon: " + EMoon);
+        para.appendChild(node);
+        const element = document.getElementById('panel');
+        element.appendChild(para);
+        const MoonData =EMoon.toLowerCase() ;
+        console.log(MoonData);
+        console.log(planet_data+"europe")
+
+        }
+    }
 }
 
  
