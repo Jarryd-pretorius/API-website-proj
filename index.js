@@ -52,27 +52,57 @@ async function getPlanetWeather() {
         console.log('null')
         
         document.getElementById('moons').innerHTML = 0
+        
     } else 
     {
+        document.getElementById('panel').innerHTML = "";
         const numMoons = planet_data.moons.length;
         document.getElementById('moons').innerHTML = 
         numMoons;
         const Moons = planet_data.moons
+        
    
 
         for (const n of Moons) {
         const moonObj = n
-        //    console.log(moonObj);
         const EMoon = moonObj.moon
-        //    console.log(EMoon);
-        const para = document.createElement("p");
-        const node = document.createTextNode("Moon: " + EMoon);
-        para.appendChild(node);
-        const element = document.getElementById('panel');
-        element.appendChild(para);
-        const MoonData =EMoon.toLowerCase() ;
-        console.log(MoonData);
-        console.log(planet_data+"europe")
+        const head = document.createElement("h3");
+        const tag = `MoonHead${EMoon}`
+        head.setAttribute("id", tag)
+        head.setAttribute("class", 'MoonCount')
+        const node = document.createTextNode(EMoon);
+        head.appendChild(node);
+        const element = document.getElementById('panel_moon');
+        element.appendChild(head);        
+        const MoonRel_response = await fetch(moonObj.rel);
+        const MoonRel_data = await MoonRel_response.json()
+        const moonMass = MoonRel_data.mass.massValue;
+        const MoonMassExpo = MoonRel_data.mass.massExponent;
+        const MoonGravity = MoonRel_data.gravity;
+        const MoonDiscoveredBy = MoonRel_data.discoveredBy;
+        const MoonDiscoveryDate = MoonRel_data.discoveryDate;
+        const paraMass = document.createElement('p');
+        const nodeMass = document.createTextNode("Mass: " + moonMass + "^ " + MoonMassExpo + " kg")
+         paraMass.appendChild(nodeMass)
+         const MoonEl = document.getElementById(tag)
+         MoonEl.appendChild(paraMass)
+         const paraGravity = document.createElement('p');
+        const nodeGravity = document.createTextNode("Gravity: " + MoonGravity + " ms^-2");
+         paraGravity.appendChild(nodeGravity)
+         const MoonGrav = document.getElementById(tag)
+         MoonGrav.appendChild(paraGravity)
+         const paraPerson = document.createElement('p');
+        const nodePerson = document.createTextNode("Discovered By: " + MoonDiscoveredBy);
+         paraPerson.appendChild(nodePerson)
+         const Moonperson = document.getElementById(tag)
+         Moonperson.appendChild(paraPerson)
+         const paraDate = document.createElement('p');
+         const nodeDate = document.createTextNode("Discovery Date: " + MoonDiscoveryDate);
+          paraDate.appendChild(nodeDate)
+          const MoonDate = document.getElementById(tag)
+          MoonDate.appendChild(paraDate)
+                
+               
 
         }
     }
